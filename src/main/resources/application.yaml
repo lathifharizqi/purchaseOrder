@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: test-be
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test_db?currentSchema=public
+    username: be
+    password: be
+    driver-class-name: org.postgresql.Driver
+  main:
+    allow-circular-references: true
+
+    jpa:
+      properties:
+        hibernate:
+          format_sql: true
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          ddl-auto: update
+        show_sql: true
+        generate-ddl: true
