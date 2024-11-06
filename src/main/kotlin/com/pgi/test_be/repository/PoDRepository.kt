@@ -4,4 +4,5 @@ import com.pgi.test_be.domain.entity.PoDEntity
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface PoDRepository: JpaRepository<PoDEntity, Int> {
+    fun findByPohId(pohId: Int): List<PoDEntity>
 }
